@@ -1,0 +1,70 @@
+﻿<Window x:Class="Automush.AutomushWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Automush"
+        mc:Ignorable="d"
+        Title="Automush.NET" Height="492" Width="750" Topmost="True" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF717171" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="334*"/>
+            <ColumnDefinition Width="41*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFA1FF80" Offset="0"/>
+                <GradientStop Color="#FF525252" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="runButton" Content="Run DLLInjector" HorizontalAlignment="Left" Margin="322,384,0,0" VerticalAlignment="Top" Width="396" Height="63" Background="#FF30B900" FontFamily="Arial" FontSize="42" FontWeight="Bold" Click="RunButton_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="filePathTextBox" HorizontalAlignment="Left" Margin="322,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316" Height="20"/>
+        <Label x:Name="label" Content="DLLInjector file path:" HorizontalAlignment="Left" Margin="322,48,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="browseButton" Content="Browse" HorizontalAlignment="Left" Margin="643,79,0,0" VerticalAlignment="Top" Height="20" Width="75" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Click="BrowseButton_Click" Grid.ColumnSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="countLabel" Content="Using &lt;blank&gt; app IDs out of &lt;blank&gt;" HorizontalAlignment="Left" Margin="410,162,0,0" VerticalAlignment="Top" Width="220" Background="Transparent"/>
+        <TextBox x:Name="appIdTextBox" HorizontalAlignment="Left" Margin="525,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Height="20"/>
+        <Label x:Name="label_Copy1" Content="App ID:" HorizontalAlignment="Left" Margin="471,307,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="gameNameTextBox" HorizontalAlignment="Left" Margin="525,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Height="20"/>
+        <Label x:Name="label_Copy2" Content="Game Name (Optional):" HorizontalAlignment="Left" Margin="385,331,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="525,359,0,0" VerticalAlignment="Top" Height="20" Width="114" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Click="AddButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="removeButton" Content="Remove" HorizontalAlignment="Left" Margin="401,359,0,0" VerticalAlignment="Top" Height="20" Width="114" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Background="Red" Click="RemoveButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="label_Copy3" Content="Add new app ID:" HorizontalAlignment="Left" Margin="525,279,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="gameNameListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,23,507,10" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.ScrollChanged="GameNameListBox_ScrollChanged" SelectionChanged="GameNameListBox_SelectedIndexChanged" ScrollViewer.HorizontalScrollBarVisibility="Hidden"/>
+        <ListBox x:Name="appIdListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="166,23,351,10" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.ScrollChanged="AppIDListBox_ScrollChanged" SelectionChanged="AppIdListBox_SelectedIndexChanged" ScrollViewer.HorizontalScrollBarVisibility="Hidden"/>
+        <Label x:Name="label_Copy" Content="Games:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy4" Content="App IDs:" HorizontalAlignment="Left" Margin="166,0,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
