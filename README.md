@@ -4,7 +4,7 @@ A Steam app ID manager for GreenLuma / DLLInjector
 ![](Screenshot.PNG)
 
 ### Set Up:
-*Requires* **.NET 8.0**. Get it here: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+***Requires*** **.NET 8.0**. Get it here: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
 Download the latest release.
 
