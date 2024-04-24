@@ -3,9 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Automush"
         mc:Ignorable="d"
-        Title="Automush.NET" Height="492" Width="750" Topmost="True" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Automush.NET" Height="492" Width="750" Topmost="False" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black"/>
@@ -66,5 +65,6 @@
         <ListBox x:Name="appIdListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="166,23,351,10" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.ScrollChanged="AppIDListBox_ScrollChanged" SelectionChanged="AppIdListBox_SelectedIndexChanged" ScrollViewer.HorizontalScrollBarVisibility="Hidden"/>
         <Label x:Name="label_Copy" Content="Games:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy4" Content="App IDs:" HorizontalAlignment="Left" Margin="166,0,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="playButton" Content="Play" HorizontalAlignment="Left" Margin="350,359,0,0" Width="40" Background="Yellow" VerticalAlignment="Top" Click="PlayButton_Click"/>
     </Grid>
 </Window>
