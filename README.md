@@ -11,10 +11,10 @@ then click **Browse** and set the correct location, otherwise you are good to go
 
 
 ### Features:
-Synchronized scroll bars to display and edit your list of app IDs.
+Remove app IDs by clicking on their name or app ID and hit **Remove**.
 
-Remove app IDs by clicking on their name *or* the app ID and hit **Remove**.
+Add app IDs by typing in the app ID and *optional* name then hit **Add**. Leave the name box empty and it will automatically scrape the game title from the Steam store. (Works for most games)
 
-Add app IDs by typing in the app ID and *optional* name then hit **Add**.
+Edit app IDs or names by typing in the app ID and/or name and hit **Edit**.
 
 Start DLLInjector with the **Run DLLInjector** button
